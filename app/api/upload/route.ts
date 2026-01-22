@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     await writeFile(filepath, buffer)
 
-    // Return public URL
+    // Return public URL - Next.js serves files from public/ directory at root
     const publicUrl = `/uploads/${filename}`
 
     return NextResponse.json({

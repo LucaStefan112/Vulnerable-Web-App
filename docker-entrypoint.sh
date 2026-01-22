@@ -26,4 +26,9 @@ if [ $success -eq 0 ]; then
   exit 1
 fi
 
+# Create uploads directory if it doesn't exist
+mkdir -p /app/public/uploads
+chmod 755 /app/public/uploads
+echo "Uploads directory ready"
+
 exec "$@"

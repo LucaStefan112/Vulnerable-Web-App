@@ -20,6 +20,9 @@ COPY . .
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
+# Create uploads directory
+RUN mkdir -p public/uploads
+
 # Build the application
 RUN npm run build
 

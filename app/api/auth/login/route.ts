@@ -60,6 +60,7 @@ export async function POST(request: NextRequest) {
       httpOnly: false, // INTENTIONALLY INSECURE
       secure: false, // INTENTIONALLY INSECURE
       sameSite: 'lax',
+      path: '/', // Ensure cookie is available for all paths
       maxAge: 60 * 60 * 24 * 365, // 365 days
     })
 
